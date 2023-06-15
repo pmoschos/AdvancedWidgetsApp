@@ -8,7 +8,7 @@ We show in separated Activities the design and the use of some advanced android 
 - RatingBar
 - SeekBar
 - SwitchButton
-and how to create our own button shapes.
+- customized buttons.
 
 Also, we create Vector Asset.
 
