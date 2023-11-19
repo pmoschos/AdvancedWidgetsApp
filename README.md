@@ -7,10 +7,10 @@ We show in separated Activities the design and the use of some advanced android 
 - RatioButtons
 - RatingBar
 - SeekBar
-- SwitchButton
-- customized buttons.
+- Switch Button
+- Customized Buttons
 
-Also, we create Vector Asset.
+Also, we create Vector Asset (electric bike) :bike:
 
 ![image](https://github.com/pmoschos/AdvancedWidgetsApp/assets/133533759/3f6eea3b-01b0-49fe-998b-4b1626c26bc4)
 
