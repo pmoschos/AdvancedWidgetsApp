@@ -280,7 +280,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 # 6. SwitchButton Activity Overview 🔀
 
-## Introduction 📕
+## Introduction 📖
 This document details the `SwitchButton` activity within our Android application, highlighting how a Switch widget is used to toggle between two states.
 
 ## Component Overview 🧩
