@@ -139,3 +139,48 @@ private void downloadFile() {
 ```
 ## ProgressBarActivity :camera:
 ![image](https://github.com/pmoschos/AdvancedWidgetsApp/assets/133533759/b79d4b74-429f-45dd-95fa-5827ae56198b)
+
+# RadioButton Activity Overview 📻
+
+## Introduction 🌟
+This section provides an overview of the `RadioButton` activity in our Android application. It explains the implementation of the RadioGroup and Button components to handle user selections.
+
+## Component Overview 🧩
+
+### Initialization 🔍
+- **RadioGroup:** `@+id/radioGroup`
+- **Button (Submit):** `@+id/submitBtn2`
+
+### Functionality 🛠️
+- The `RadioGroup` allows users to select one of several options.
+- Upon clicking the submit button, the selected option from the RadioGroup is identified.
+- A `Toast` message is displayed showing the user's selection.
+
+## Code Snippet 💻
+```java
+private RadioGroup radioGroup;
+private Button submitBtn2;
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_radio_button);
+
+    radioGroup = findViewById(R.id.radioGroup);
+    submitBtn2 = findViewById(R.id.submitBtn2);
+
+    submitBtn2.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            int selectedId = radioGroup.getCheckedRadioButtonId();
+            RadioButton radioButton = findViewById(selectedId);
+
+            Toast.makeText(RadioButtonActivity.this, "Selected delivery: " + radioButton.getText(),
+                    Toast.LENGTH_SHORT).show();
+        }
+    });
+}
+```
+
+## RadioButtonActivity :camera:
+![image](https://github.com/pmoschos/AdvancedWidgetsApp/assets/133533759/309a0ed0-6528-4c86-a997-29b16423749f)
