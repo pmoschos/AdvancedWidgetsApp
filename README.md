@@ -291,30 +291,6 @@ This document details the `SwitchButton` activity within our Android application
 - The `Switch` acts as a toggle switch allowing users to switch between an on/off state.
 - When the state of the Switch changes, a `Toast` message is displayed to reflect the current state of the Switch.
 
-## Code Snippet 💻
-```java
-private Switch switchBtn;
-
-@Override
-protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_switch_button);
-
-    switchBtn = findViewById(R.id.switchBtn);
-
-    switchBtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-            if (isChecked) {
-                Toast.makeText(SwitchButtonActivity.this, "Switch is ON", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(SwitchButtonActivity.this, "Switch is OFF", Toast.LENGTH_SHORT).show();
-            }
-        }
-    });
-}
-```
-
 ## Switch Button :camera:
 ![image](https://github.com/pmoschos/AdvancedWidgetsApp/assets/133533759/69e36eb8-b63a-488a-b55b-688480a4540c)
 
