@@ -19,7 +19,7 @@ Also, we create Vector Asset.
 ## Introduction 🌟
 This document provides an in-depth look at the `MainActivity` in our Android application, focusing on the implementation and functionality of a `CheckBox`.
 
-## 1. CheckBox Implementation ✅
+# 1. CheckBox Implementation ✅
 The `MainActivity` includes a `CheckBox` widget that showcases basic user interactions and state handling within an Android UI.
 
 ### Initialization 🔍
