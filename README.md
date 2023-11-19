@@ -14,12 +14,12 @@ Also, we create Vector Asset.
 
 ![image](https://github.com/pmoschos/AdvancedWidgetsApp/assets/133533759/3f6eea3b-01b0-49fe-998b-4b1626c26bc4)
 
-# MainActivity Overview 📱
+# 1. MainActivity Overview 📱
 
 ## Introduction 🌟
 This document provides an in-depth look at the `MainActivity` in our Android application, focusing on the implementation and functionality of a `CheckBox`.
 
-# 1. CheckBox Implementation ✅
+## CheckBox Implementation ✅
 The `MainActivity` includes a `CheckBox` widget that showcases basic user interactions and state handling within an Android UI.
 
 ### Initialization 🔍
