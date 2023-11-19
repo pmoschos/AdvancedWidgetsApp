@@ -226,3 +226,57 @@ protected void onCreate(Bundle savedInstanceState) {
 ## RadioButtonActivity :camera:
 ![image](https://github.com/pmoschos/AdvancedWidgetsApp/assets/133533759/f3dc572b-416b-4cee-b86d-061d9e456be9)
 
+# SeekBar Activity Overview 🎚️
+
+## Introduction 📘
+This section outlines the functionality of the `SeekBar` activity in our Android application, focusing on the use of a SeekBar to dynamically change the background color of a layout.
+
+## Component Overview 🧩
+
+### Initialization 🔎
+- **SeekBar:** `@+id/seekBar`
+- **ConstraintLayout (Background):** `@+id/constraintLayoutBackground`
+
+### Functionality ⚙️
+- The `SeekBar` provides a user interface element for adjusting values by sliding a handle.
+- As the user slides the handle, the background color of the `ConstraintLayout` dynamically changes.
+- The color change is based on the seek bar's progress value, modifying the RGB values.
+
+## Code Snippet 💻
+```java
+private SeekBar seekBar;
+private ConstraintLayout constraintLayoutBackground;
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_seek_bar);
+
+    seekBar = findViewById(R.id.seekBar);
+    constraintLayoutBackground = findViewById(R.id.constraintLayoutBackground);
+
+    seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        @Override
+        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+            int color = Color.rgb(progress, 255, progress);
+            constraintLayoutBackground.setBackgroundColor(color);
+        }
+
+        @Override
+        public void onStartTrackingTouch(SeekBar seekBar) {
+            // Implement if needed
+        }
+
+        @Override
+        public void onStopTrackingTouch(SeekBar seekBar) {
+            // Implement if needed
+        }
+    });
+}
+```
+
+## RadioButtonActivity :camera:
+![image](https://github.com/pmoschos/AdvancedWidgetsApp/assets/133533759/07c6dffd-d4fd-442f-b2e9-a2d40b0f7d24)
+
+
+
