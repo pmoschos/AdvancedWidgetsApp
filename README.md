@@ -181,6 +181,48 @@ protected void onCreate(Bundle savedInstanceState) {
     });
 }
 ```
-
 ## RadioButtonActivity :camera:
 ![image](https://github.com/pmoschos/AdvancedWidgetsApp/assets/133533759/309a0ed0-6528-4c86-a997-29b16423749f)
+
+# RatingBar Activity Overview 🌟
+
+## Introduction 📖
+This document details the `RatingBar` activity in our Android application, highlighting the integration of the RatingBar and Button components for capturing user ratings.
+
+## Component Overview 🧩
+
+### Initialization 🔎
+- **RatingBar:** `@+id/ratingBar`
+- **Button (Submit):** `@+id/submitBtn`
+
+### Functionality ⚙️
+- The `RatingBar` allows users to provide a rating, typically out of five stars.
+- Upon clicking the submit button, the current rating value is retrieved.
+- A `Toast` message displays the user's given rating.
+
+## Code Snippet 💻
+```java
+private RatingBar ratingBar;
+private Button submitBtn;
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_rating_bar);
+
+    ratingBar = findViewById(R.id.ratingBar);
+    submitBtn = findViewById(R.id.submitBtn);
+
+    submitBtn.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            float rating = ratingBar.getRating();
+            Toast.makeText(RatingBarActivity.this, "Rating: " + rating, Toast.LENGTH_SHORT).show();
+        }
+    });
+}
+```
+
+## RadioButtonActivity :camera:
+![image](https://github.com/pmoschos/AdvancedWidgetsApp/assets/133533759/f3dc572b-416b-4cee-b86d-061d9e456be9)
+
