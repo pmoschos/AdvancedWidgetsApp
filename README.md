@@ -19,7 +19,7 @@ Also, we create Vector Asset.
 ## Introduction 🌟
 This document provides an in-depth look at the `MainActivity` in our Android application, focusing on the implementation and functionality of a `CheckBox`.
 
-## CheckBox Implementation ✅
+## 1. CheckBox Implementation ✅
 The `MainActivity` includes a `CheckBox` widget that showcases basic user interactions and state handling within an Android UI.
 
 ### Initialization 🔍
@@ -65,10 +65,10 @@ protected void onCreate(Bundle savedInstanceState) {
     });
 }
 ```
-## MainActivity :camera:
+## CheckBox :camera:
 ![image](https://github.com/pmoschos/AdvancedWidgetsApp/assets/133533759/1af4cd6b-7826-4dbe-b370-ebfb15f2942d)
 
-# ProgressBar Activity Overview 🚀
+# 2. ProgressBar Activity Overview 🚀
 
 ## Introduction 🌟
 This section of the documentation focuses on the `ProgressBar` activity in the Android application. It provides insights into how the ProgressBar, TextView, and Button components are used to simulate a file download process.
@@ -137,10 +137,10 @@ private void downloadFile() {
     }).start();
 }
 ```
-## ProgressBarActivity :camera:
+## ProgressBar :camera:
 ![image](https://github.com/pmoschos/AdvancedWidgetsApp/assets/133533759/b79d4b74-429f-45dd-95fa-5827ae56198b)
 
-# RadioButton Activity Overview 📻
+# 3. RadioButton Activity Overview 📻
 
 ## Introduction 🌟
 This section provides an overview of the `RadioButton` activity in our Android application. It explains the implementation of the RadioGroup and Button components to handle user selections.
@@ -181,10 +181,10 @@ protected void onCreate(Bundle savedInstanceState) {
     });
 }
 ```
-## RadioButtonActivity :camera:
+## Radio Button :camera:
 ![image](https://github.com/pmoschos/AdvancedWidgetsApp/assets/133533759/309a0ed0-6528-4c86-a997-29b16423749f)
 
-# RatingBar Activity Overview 🌟
+# 4. RatingBar Activity Overview 🌟
 
 ## Introduction 📖
 This document details the `RatingBar` activity in our Android application, highlighting the integration of the RatingBar and Button components for capturing user ratings.
@@ -223,10 +223,10 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 ```
 
-## RadioButtonActivity :camera:
+## Rating Bar :camera:
 ![image](https://github.com/pmoschos/AdvancedWidgetsApp/assets/133533759/f3dc572b-416b-4cee-b86d-061d9e456be9)
 
-# SeekBar Activity Overview 🎚️
+# 5. SeekBar Activity Overview 🎚️
 
 ## Introduction 📘
 This section outlines the functionality of the `SeekBar` activity in our Android application, focusing on the use of a SeekBar to dynamically change the background color of a layout.
@@ -275,8 +275,48 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 ```
 
-## RadioButtonActivity :camera:
+## SeekBar :camera:
 ![image](https://github.com/pmoschos/AdvancedWidgetsApp/assets/133533759/07c6dffd-d4fd-442f-b2e9-a2d40b0f7d24)
 
+# 6. SwitchButton Activity Overview 🔀
+
+## Introduction 📕
+This document details the `SwitchButton` activity within our Android application, highlighting how a Switch widget is used to toggle between two states.
+
+## Component Overview 🧩
+
+### Initialization 🔍
+- **Switch:** `@+id/switchBtn`
+
+### Functionality 🎚️
+- The `Switch` acts as a toggle switch allowing users to switch between an on/off state.
+- When the state of the Switch changes, a `Toast` message is displayed to reflect the current state of the Switch.
+
+## Code Snippet 💻
+```java
+private Switch switchBtn;
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_switch_button);
+
+    switchBtn = findViewById(R.id.switchBtn);
+
+    switchBtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            if (isChecked) {
+                Toast.makeText(SwitchButtonActivity.this, "Switch is ON", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(SwitchButtonActivity.this, "Switch is OFF", Toast.LENGTH_SHORT).show();
+            }
+        }
+    });
+}
+```
+
+## Switch Button :camera:
+![image](https://github.com/pmoschos/AdvancedWidgetsApp/assets/133533759/69e36eb8-b63a-488a-b55b-688480a4540c)
 
 
