@@ -1,4 +1,4 @@
-# AdvancedWidgetsApp
+# Advanced Widgets Application
 Advanced Widgets
 
 We show in separated Activities the design and the use of some advanced android widgets as:
