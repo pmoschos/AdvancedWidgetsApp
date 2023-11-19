@@ -67,3 +67,75 @@ protected void onCreate(Bundle savedInstanceState) {
 ```
 ## MainActivity :camera:
 ![image](https://github.com/pmoschos/AdvancedWidgetsApp/assets/133533759/1af4cd6b-7826-4dbe-b370-ebfb15f2942d)
+
+# ProgressBar Activity Overview 🚀
+
+## Introduction 🌟
+This section of the documentation focuses on the `ProgressBar` activity in the Android application. It provides insights into how the ProgressBar, TextView, and Button components are used to simulate a file download process.
+
+## Component Overview 🧩
+
+### Initialization 🔍
+- **ProgressBar:** `@+id/progressBar`
+- **TextView (Progress Display):** `@+id/progressTV`
+- **Button (Start Download):** `@+id/button`
+
+### Functionality 🛠️
+- Upon clicking the button, a simulated file download process is initiated.
+- The `ProgressBar` visually indicates the progress of the download.
+- The `TextView` displays the current percentage of the download process.
+
+## Code Snippet 💻
+```java
+private ProgressBar progressBar;
+private TextView progressTV;
+private Button button;
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_progress_bar);
+
+    progressBar = findViewById(R.id.progressBar);
+    progressTV = findViewById(R.id.progressTV);
+    button = findViewById(R.id.button);
+
+    button.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            progressTV.setVisibility(View.VISIBLE);
+            downloadFile();
+        }
+    });
+}
+
+private void downloadFile() {
+    new Thread(new Runnable() {
+        @Override
+        public void run() {
+            int progress = 0;
+            while (progress <= 100) {
+                int currentProgress = progress;
+
+                // Update the state of progress
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        progressBar.setProgress(currentProgress);
+                        progressTV.setText(currentProgress + "%");
+                    }
+                });
+
+                try {
+                    Thread.sleep(20);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                progress++;
+            }
+        }
+    }).start();
+}
+```
+## ProgressBarActivity :camera:
+![image](https://github.com/pmoschos/AdvancedWidgetsApp/assets/133533759/b79d4b74-429f-45dd-95fa-5827ae56198b)
